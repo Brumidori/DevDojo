@@ -8,5 +8,6 @@ public class Aula02TiposPrimitivos {
         int age = 10;
 
         System.out.println("a idade e: " + age + " anos.");
+        //teste
     }
 }
