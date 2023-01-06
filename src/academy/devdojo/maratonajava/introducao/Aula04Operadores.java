@@ -9,5 +9,18 @@ public class Aula04Operadores {
         System.out.println("Valor" + numero02 + numero01);
         System.out.println(numero02 + numero01 + "Valor" + numero02 + numero01);//cuidado com a String
         System.out.println(resultado);
+
+        int resto = 20%2;
+        System.out.println(resto);
+
+        //operadores logicos retornam valores booleanos
+        boolean isDezMaiorQueVinte = 10>20;
+        boolean isDezMenorQueVinte = 10<20;
+        boolean isDezIgualVinte = 10==20;
+        boolean isDezDiferenteQueVinte = 10 != 20;
+        System.out.println(isDezMaiorQueVinte);
+        System.out.println(isDezMenorQueVinte);
+        System.out.println(isDezIgualVinte);
+        System.out.println(isDezDiferenteQueVinte);
     }
 }
