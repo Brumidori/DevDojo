@@ -39,5 +39,30 @@ public class Aula04Operadores {
         boolean isPlayStation5Compravel = valorTotalContaCorrente > valorPlayStation || valorTotalContaPoupanca > valorPlayStation;
         System.out.println("isPlayStation5Compravel " + isPlayStation5Compravel);
 
+        //operadores de atribuicao = += -= /= %=
+        double bonus = 1000;
+        bonus += 2000;
+        System.out.println(bonus);
+        bonus -= 1000;
+        System.out.println(bonus);
+        bonus *= 2;
+        System.out.println(bonus);
+        bonus /=2;
+        System.out.println(bonus);
+        bonus %=2;
+        System.out.println(bonus);
+
+        int contador = 0;
+        contador+=1;
+        contador++;
+        contador--;
+        ++contador;
+        --contador;
+        System.out.println(contador);
+
+        int contador2 = 0;
+        System.out.println(contador2++); //resultado final 2, mas nao mostra pois ++ no final primeiro imprimi depois soma
+        System.out.println(++contador); // resultado 2, soma e imprimi
+
     }
 }
