@@ -16,7 +16,11 @@ public class EstudanteTest01 {
         estudante02.nome = "Sakura";
         estudante02.idade = 16;
         estudante02.sexo = 'F';
+
         impressoraEstudante.imprime(estudante01);
+        impressoraEstudante.imprime(estudante02);
+        System.out.println("###############");
+        impressoraEstudante.imprime(estudante01); //altera os dados do objeto - certo e fazer ref/copia
         impressoraEstudante.imprime(estudante02);
 
     }
