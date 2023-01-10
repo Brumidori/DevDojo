@@ -13,4 +13,11 @@ public class Calculadora {
     public void multiplicaDoisNumeros(int a, float b){
         System.out.println(a*b);
     }
+
+    public double divideDoisNumeros(int num1, double num2){
+        if (num2 ==0){
+            return 0;
+        }
+        return num1/num2;
+    }
 }
