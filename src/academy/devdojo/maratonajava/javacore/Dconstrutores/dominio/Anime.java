@@ -5,20 +5,30 @@ public class Anime {
     private int episodios;
     private String nome;
     private String genero;
+    private String studio;
 
     //sobrecarga de metodos - mesmo nome e tipo (assinatura) mas parametros diferentes
+    //construtores nao tem retorno
+    //this so funciona em construtor e na PRIMEIRA linha executavel
     public Anime(String nome, String tipo, int episodios){
-        System.out.println("Dentro do construtor");
+        this();
         this.nome = nome;
         this.tipo = tipo;
         this.episodios = episodios;
     }
 
     public Anime(String nome, String tipo, int episodios, String genero){
-        this.nome = nome;
-        this.tipo = tipo;
-        this.episodios = episodios;
+        this(nome, tipo, episodios);
         this.genero = genero;
+    }
+
+    public Anime(String nome, String tipo, int episodios, String genero, String studio){
+        this(nome, tipo, episodios, genero);
+        this.studio = studio;
+    }
+
+    public Anime (){
+        System.out.println("Dentro do construtor vazio");
     }
 
     public void imprime(){
@@ -26,6 +36,15 @@ public class Anime {
         System.out.println(this.nome);
         System.out.println(this.episodios);
         System.out.println(this.genero);
+        System.out.println(this.studio);
+    }
+
+    public String getStudio() {
+        return studio;
+    }
+
+    public void setStudio(String studio) {
+        this.studio = studio;
     }
 
     public String getGenero() {
