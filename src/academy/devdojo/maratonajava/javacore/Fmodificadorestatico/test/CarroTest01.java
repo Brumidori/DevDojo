@@ -12,7 +12,7 @@ public class CarroTest01 {
         c2.imprime();
         c3.imprime();
 
-        Carro.velocidadeLimite(120);
+        Carro.setVelocidadeLimite(120);
         c1.imprime();
         c2.imprime();
         c3.imprime();
