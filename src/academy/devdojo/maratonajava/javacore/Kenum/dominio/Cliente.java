@@ -1,12 +1,10 @@
 package academy.devdojo.maratonajava.javacore.Kenum.dominio;
 
 import academy.devdojo.maratonajava.javacore.Jmodificadofinal.dominio.TipoCliente;
+import academy.devdojo.maratonajava.javacore.Jmodificadofinal.dominio.TipoPagamento;
 
 public class Cliente {
-    public enum TipoPagamento{
-        //posivel criar enum dentro da propria classe
-        DEBITO, CREDITO
-    }
+
     private String nome;
     private TipoCliente tipoCliente;
     private TipoPagamento tipoPagamento;
