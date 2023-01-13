@@ -9,6 +9,12 @@ public class Endereco {
         this.cep = cep;
     }
 
+    public void imprime(){
+        Pessoa p = new Pessoa();
+        //consegue acessar atributo nome pois no mesmo pacote (protected)
+        p.nome = "sassa";
+    }
+
     public String getRua() {
         return rua;
     }

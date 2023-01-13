@@ -12,4 +12,9 @@ public class Funcionario extends Pessoa{
        super.imprime();
         System.out.println(this.salario);
     }
+
+    public void imprime2(){
+        //pode puxar o atributo nome pois esta como protected
+        System.out.println(this.nome);
+    }
 }

@@ -1,15 +1,18 @@
 package academy.devdojo.maratonajava.javacore.Hheranca.dominio;
 
 public class Pessoa {
-    private String nome;
-    private String cpf;
-    private Endereco endereco;
+    //protected da acesso as classes filhas e mesmo pacote como se fosse public
+    protected String nome;
+    protected String cpf;
+    protected Endereco endereco;
 
     public Pessoa(String nome, String cpf, Endereco endereco) {
         this.nome = nome;
         this.cpf = cpf;
         this.endereco = endereco;
     }
+
+    public Pessoa(){}
 
     public void imprime(){
         System.out.println(this.getNome());
