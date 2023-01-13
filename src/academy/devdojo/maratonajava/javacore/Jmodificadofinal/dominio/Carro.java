@@ -13,6 +13,18 @@ public class Carro {
         COR = "vermelha";
     }
 
+    public final void imprime(){
+        System.out.println(this.nome);
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
     public Comprador getCOMPRADOR() {
         return COMPRADOR;
     }

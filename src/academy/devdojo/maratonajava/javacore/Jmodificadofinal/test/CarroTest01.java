@@ -2,6 +2,7 @@ package academy.devdojo.maratonajava.javacore.Jmodificadofinal.test;
 
 import academy.devdojo.maratonajava.javacore.Jmodificadofinal.dominio.Carro;
 import academy.devdojo.maratonajava.javacore.Jmodificadofinal.dominio.Comprador;
+import academy.devdojo.maratonajava.javacore.Jmodificadofinal.dominio.Ferrari;
 
 public class CarroTest01 {
     public static void main(String[] args) {
@@ -14,6 +15,11 @@ public class CarroTest01 {
         //nao consigo trocar o comprador do carro por comprador2 - pois é final
         carro.COMPRADOR.setNome("Kiririn");
         System.out.println(carro.COMPRADOR);
+
+        Ferrari ferrari = new Ferrari();
+        ferrari.setNome("Enzo ");
+        ferrari.imprime();
+        //nao pode sobrescrever imprime pois como metodo final
 
     }
 }
