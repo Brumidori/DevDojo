@@ -17,4 +17,5 @@ public class Desenvolvedor extends Funcionario{
                 ", salario=" + salario +
                 '}';
     }
+
 }
