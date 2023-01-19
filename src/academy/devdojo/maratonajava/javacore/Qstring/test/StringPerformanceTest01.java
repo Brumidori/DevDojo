@@ -1,21 +1,45 @@
 
 package academy.devdojo.maratonajava.javacore.Qstring.test;
 
-public class StringTest02 {
+public class StringPerformanceTest01 {
     public static void main(String[] args) {
-        //strings sao imutaveis
-        String nome = " Luffy ";
-        System.out.println(nome.charAt(1));//começa no zero
-        System.out.println(nome.length());
-        System.out.println(nome.replace("f", "l"));
-        System.out.println(nome.toUpperCase());
+        long inicio = System.currentTimeMillis();
+        concatString(100000);
+        long fim = System.currentTimeMillis();
+        System.out.println("Tempo gasto para String " + (fim -inicio) + " ms");
 
-        String numeros = "012345";
-        System.out.println(numeros.length());
-        System.out.println(numeros.substring(1,4));//segundo parametro nao eh inclusivo
-        // no caso vai da posicao [1] a [3]
-        System.out.println(numeros.substring(3));
-        System.out.println(nome.trim());//remove espaços em branco no começo e no final
+         inicio = System.currentTimeMillis();
+        concatStringBuilder(100000);
+         fim = System.currentTimeMillis();
+        System.out.println("Tempo gasto para StringBuilder " + (fim -inicio) + " ms");
 
+        inicio = System.currentTimeMillis();
+        concatStringBuffer(100000);
+        fim = System.currentTimeMillis();
+        System.out.println("Tempo gasto para StringBuffer " + (fim -inicio) + " ms");
+    }
+
+    private static void concatString(int tamanho){
+        String texto = "";
+        for (int i = 0; i < tamanho; i++){
+            texto +=i;
+        }
+    }
+
+
+    //string builder diminui o tempo de execucao
+    private static void concatStringBuilder(int tamanho){
+        StringBuilder sb = new StringBuilder(tamanho);
+        for (int i = 0; i < tamanho; i++){
+            sb.append(i);
+        }
+    }
+
+    //string buffer diminui o tempo de execucao - synchronize
+    private static void concatStringBuffer(int tamanho){
+        StringBuffer sbf = new StringBuffer(tamanho);
+        for (int i = 0; i < tamanho; i++){
+            sbf.append(i);
+        }
     }
 }
