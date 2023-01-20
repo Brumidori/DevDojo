@@ -4,9 +4,19 @@ import academy.devdojo.maratonajava.javacore.Ycollections.dominio.Manga;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class MagaSortTest01 {
+
+    class MangaByIdComparator implements Comparator<Manga>{
+
+        @Override
+        public int compare(Manga o1, Manga o2) {
+            return o1.getId().compareTo(o2.getId());
+        }
+    }
+
     public static void main(String[] args) {
         List<Manga> mangas = new ArrayList<>();
         mangas.add(new Manga(5L, "Pokemon", 19.9));
@@ -18,7 +28,7 @@ public class MagaSortTest01 {
             System.out.println(manga);
         }
         System.out.println("-----------");
-        Collections.sort(mangas);
+        Collections.sort(mangas, new MangaByIdComparator());
         for (Manga manga : mangas) {
             System.out.println(manga);
         }
