@@ -7,6 +7,7 @@ public class EqualsTest01 {
         Smartphone s1 = new Smartphone("1ABD1", "Iphone");
         Smartphone s2 = new Smartphone("1ABD1", "Iphone");
         System.out.println(s1.equals(s2)); //false pois 2 obj
+        //true pois reescrevemos o equals() de acordo com o serialNumber
         s1 = s2;
         System.out.println(s1.equals(s2));//true pois faz ref ao mesmo obj
     }
