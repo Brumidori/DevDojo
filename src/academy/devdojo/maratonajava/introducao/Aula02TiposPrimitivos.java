@@ -17,10 +17,13 @@ public class Aula02TiposPrimitivos {
         char caractere = 87; //tabela ascII
         char caractere1 = '\u0841'; //tabela unicode
 
+        String string = "um grande texto";
 
         System.out.println("a idade e: " + age + " anos.");
         System.out.println(falso);
         System.out.println("char: " + caractere);
         System.out.println(cast);
+        System.out.println(string);
     }
 }
+
