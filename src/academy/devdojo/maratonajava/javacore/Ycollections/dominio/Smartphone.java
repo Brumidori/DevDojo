@@ -17,6 +17,11 @@ public class Smartphone {
         return serialNumber!= null && serialNumber.equals(smartphone.serialNumber);
     }
 
+    @Override
+    public int hashCode() {
+        return serialNumber == null ? 0 : this.serialNumber.hashCode();
+    }
+
     public Smartphone(String serialNumber, String marca) {
         this.serialNumber = serialNumber;
         this.marca = marca;
